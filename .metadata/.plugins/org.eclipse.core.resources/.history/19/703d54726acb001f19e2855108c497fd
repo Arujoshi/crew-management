@@ -1,0 +1,5 @@
+package com.crew.config;
+
+public interface AuthorisationClient {
+
+}

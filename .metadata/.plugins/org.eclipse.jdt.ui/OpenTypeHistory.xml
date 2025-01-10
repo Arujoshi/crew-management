@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=CrewService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.crew.service{CrewMemberService.java[CrewMemberService" modifiers="513" timestamp="1733986994775"/>
+    <typeInfo handle="=AuthenticationService/C:\/Users\/aradh\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1682415358000"/>
+    <typeInfo handle="=AuthenticationService/C:\/Users\/aradh\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1682415358000"/>
+    <typeInfo handle="=FlightService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.flight.service{RouteService.java[RouteService" modifiers="513" timestamp="1734671036976"/>
+    <typeInfo handle="=FlightService/C:\/Users\/aradh\/.m2\/repository\/org\/springframework\/spring-test\/6.2.0\/spring-test-6.2.0.jar=/maven.pomderived=/true=/=/test=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-test=/=/maven.version=/6.2.0=/=/maven.scope=/test=/=/maven.pomderived=/true=/&lt;org.springframework.test.web.reactive.server(WebTestClient$RouterFunctionSpec.class[RouterFunctionSpec" modifiers="1545" timestamp="1734346483789"/>
+</typeInfoHistroy>

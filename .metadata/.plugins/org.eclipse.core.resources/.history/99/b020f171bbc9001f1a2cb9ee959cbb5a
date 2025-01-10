@@ -1,0 +1,80 @@
+package com.flight.model;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Entity
+@Table(name = "Flights")
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Flight {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long flightId;
+
+    @NotBlank(message = "Flight number cannot be blank")
+    @Pattern(regexp = "^[A-Z0-9-]+$", message = "Invalid flight number format")
+    @Column(name = "FlightNumber", unique = true, nullable = false)
+    private String flightNumber;
+
+    @NotBlank(message = "Flight Type cannot be blank")
+    @Column(name = "FlightType", nullable = false)
+    private String flightType; // e.g., Domestic, International, Cargo
+
+    @NotBlank(message = "Source cannot be blank")
+    @Column(name = "Source", nullable = false)
+    private String source;
+
+    @NotBlank(message = "Destination cannot be blank")
+    @Column(name = "Destination", nullable = false)
+    private String destination;
+   
+    @NotBlank(message = "Turn around time cannot be blank")
+    @Column(name = "turnaround_time_minutes")
+    private Integer turnaroundTime; // Time in minutes between landing and next departure
+
+    @Column(name = "DepartureTime", nullable = false)
+    private LocalDateTime departureTime;
+    
+    @Column(name = "ActualDepartureTime", nullable=true)
+    private LocalDateTime actualDepartureTime;
+
+    @Column(name = "ArrivalTime", nullable = false)
+    private LocalDateTime arrivalTime;
+    
+    @Column(name = "ActualArrivalTime", nullable=true)
+    private LocalDateTime actualArrivalTime;
+
+    @Column(name = "FuelConsumption")
+    private double fuelConsumption; // in liters per hour
+
+    @Column(name = "EnvironmentalImpact")
+    private String environmentalImpact; // e.g., Low, Medium, High
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "AvailableClasses", joinColumns = @JoinColumn(name = "FlightId"))
+    @Column(name = "Class")
+    private List<String> availableClasses; // e.g., Economy, Business, First Class
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "RequiredQualifications", joinColumns = @JoinColumn(name = "FlightId"))
+    @Column(name = "Qualification")
+    private List<String> requiredQualifications;
+
+    @Column(name = "OnTimePerformance", nullable = false)
+    private double onTimePerformance; // percentage
+
+    @Column(name = "FlightStatus", nullable = false)
+    private String flightStatus; // e.g., Scheduled, Boarding, In Flight, Delayed, Completed
+
+}
